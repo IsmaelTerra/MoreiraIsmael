@@ -51,7 +51,7 @@ function movimentaBolinha() {
   xBolinha += velocidadeXBolinha;
   yBolinha += velocidadeYBolinha;
 }
-
+m
 function verificaColisaoBorda() {
   if (xBolinha + raio > width || xBolinha - raio < 0) {
     velocidadeXBolinha *= -1;
@@ -64,7 +64,7 @@ function verificaColisaoBorda() {
 function mostraRaquete(x,y) {
     rect(x, y, raqueteComprimento, raqueteAltura);
 }
-
+m
 function movimentaMinhaRaquete() {
   if(keyIsDown(UP_ARROW)) {
     yRaquete -= 10;
@@ -77,7 +77,7 @@ function movimentaMinhaRaquete() {
 function verificaColisaoRaquete() {
   if (xBolinha - raio < xRaquete + raqueteComprimento && yBolinha - raio < yRaquete + raqueteAltura && yBolinha + raio > yRaquete) {
     velocidadeXBolinha *= -1;
-  }
+  }m
 }
 
 function verificaColisaoRaquete(x, y) {
@@ -97,7 +97,7 @@ function incluiPlacar(){
   stroke(255)
     textAlign(CENTER);
     textSize(16);
-    fill(color(255,140, 0));
+    fill(color(255,140, 0));m
     rect(150, 10, 40, 20);
     fill(255);
     text(meusPontos, 170, 26);
@@ -118,5 +118,5 @@ function marcaPonto() {
   if (xBolinha < 10) {
     pontosDoOponente += 1;
   }
-} 6min 6
+}
 
